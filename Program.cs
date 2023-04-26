@@ -8,7 +8,7 @@ var app = builder.Build();
 
 app.Run(async (HttpContext context) => 
 {
-    context.Response.StatusCode = 500;
+    context.Response.Headers["MyKey"] = "my value";
     await context.Response.WriteAsync("Hello Bro!");
 }
 );
