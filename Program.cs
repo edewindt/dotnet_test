@@ -31,7 +31,7 @@ app.Use(async (HttpContext context, RequestDelegate next) =>
     await context.Response.WriteAsync("First ");
     await next(context);
 });
-app.UseMiddleware<MyFirstMiddleware>();
+app.UseMyMiddleware();
 
 app.Use(async (HttpContext context, RequestDelegate next) => 
 {
@@ -40,7 +40,7 @@ app.Use(async (HttpContext context, RequestDelegate next) =>
 });
 app.Run(async (HttpContext context) => 
 {
-    await context.Response.WriteAsync("Third");
+    await context.Response.WriteAsync("Third ");
 });
 
 app.Run();
