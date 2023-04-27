@@ -25,12 +25,17 @@ var app = builder.Build();
 
 app.Use(async (HttpContext context, RequestDelegate next) => 
 {
-    await context.Response.WriteAsync("First");
+    await context.Response.WriteAsync("First ");
+    await next(context);
+});
+app.Use(async (HttpContext context, RequestDelegate next) => 
+{
+    await context.Response.WriteAsync("Second ");
     await next(context);
 });
 app.Run(async (HttpContext context) => 
 {
-    await context.Response.WriteAsync("Second");
+    await context.Response.WriteAsync("Third");
 });
 
 app.Run();
