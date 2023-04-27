@@ -8,8 +8,9 @@ var app = builder.Build();
 
 app.Run(async (HttpContext context) => 
 {
+    string path = context.Request.Path;
     context.Response.Headers["Content-Type"] = "text/html";
-    await context.Response.WriteAsync("<h1>Hello Bro!</h1>");
+    await context.Response.WriteAsync($"<h1>Hello Bro! {path}</h1>");
 }
 );
 
