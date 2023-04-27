@@ -4,7 +4,7 @@ namespace MiddlewareExample.MyFirstMiddleware
     {
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
-            await context.Response.WriteAsync("My First Middleware");
+            await context.Response.WriteAsync("My First Middleware ");
             await next(context);
         }
     }

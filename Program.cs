@@ -1,4 +1,7 @@
+using MiddlewareExample.MyFirstMiddleware;
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddTransient<MyFirstMiddleware>();
 var app = builder.Build();
 
 // app.MapGet("/", () => "Hello World!");
@@ -28,6 +31,8 @@ app.Use(async (HttpContext context, RequestDelegate next) =>
     await context.Response.WriteAsync("First ");
     await next(context);
 });
+app.UseMiddleware<MyFirstMiddleware>();
+
 app.Use(async (HttpContext context, RequestDelegate next) => 
 {
     await context.Response.WriteAsync("Second ");
