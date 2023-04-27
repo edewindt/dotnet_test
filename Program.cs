@@ -8,10 +8,18 @@ var app = builder.Build();
 
 app.Run(async (HttpContext context) => 
 {
-    string path = context.Request.Path;
-    string method = context.Request.Method;
-    context.Response.Headers["Content-Type"] = "text/html";
-    await context.Response.WriteAsync($"<h1>Hello Bro! {path} {method}</h1>");
+    string name;
+    // string path = context.Request.Path;
+    // string method = context.Request.Method;
+    if (context.Request.Query.ContainsKey("name"))
+    {
+        name = context.Request.Query["name"];
+
+        context.Response.Headers["Content-Type"] = "text/html";
+    await context.Response.WriteAsync($"<h1>Hello Bro! {name} </h1>");
+    }
+    
+    
 }
 );
 
