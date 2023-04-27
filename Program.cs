@@ -8,15 +8,15 @@ var app = builder.Build();
 
 app.Run(async (HttpContext context) => 
 {
-    string name;
+    string userAgent;
     // string path = context.Request.Path;
     // string method = context.Request.Method;
-    if (context.Request.Query.ContainsKey("name"))
+    if (context.Request.Headers.ContainsKey("User-Agent"))
     {
-        name = context.Request.Query["name"];
+        userAgent = context.Request.Headers["User-Agent"];
 
         context.Response.Headers["Content-Type"] = "text/html";
-    await context.Response.WriteAsync($"<h1>Hello Bro! {name} </h1>");
+    await context.Response.WriteAsync($"<h1>Hello Bro! {userAgent} </h1>");
     }
     
     
