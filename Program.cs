@@ -4,18 +4,25 @@ var builder = WebApplication.CreateBuilder(args);
 // builder.Services.AddTransient<MyFirstMiddleware>();
 var app = builder.Build();
 
-app.UseWhen(
-    context => context.Request.Query.ContainsKey("name"),
-    app => {
-        app.Use(async (context, next) => {
-            await context.Response.WriteAsync("Hello from UseWhen ");
-            await next();
-        });
-    }
-);
-app.Run(async context => {
-    await context.Response.WriteAsync("Hello from regular middleware");
+app.UseRouting();
+
+app.UseEndpoints(endpoints => {
+    endpoints.Map("example", async (context) => await context.Response.WriteAsync("Example"));
+    endpoints.Map("example2", async (context) => await context.Response.WriteAsync("Example2"));
 });
+
+// app.UseWhen(
+//     context => context.Request.Query.ContainsKey("name"),
+//     app => {
+//         app.Use(async (context, next) => {
+//             await context.Response.WriteAsync("Hello from UseWhen ");
+//             await next();
+//         });
+//     }
+// );
+// app.Run(async context => {
+//     await context.Response.WriteAsync("Hello from regular middleware");
+// });
 // app.MapGet("/", () => "Hello World!");
 
 // app.MapGet("/anime", () => "Anime Endpoint");
