@@ -7,8 +7,8 @@ var app = builder.Build();
 app.UseRouting();
 
 app.UseEndpoints(endpoints => {
-    endpoints.Map("example", async (context) => await context.Response.WriteAsync("Example"));
-    endpoints.Map("example2", async (context) => await context.Response.WriteAsync("Example2"));
+    endpoints.MapGet("example", async (context) => await context.Response.WriteAsync("Example"));
+    endpoints.MapGet("example2", async (context) => await context.Response.WriteAsync("Example2"));
 });
 
 // app.UseWhen(
