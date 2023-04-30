@@ -7,9 +7,13 @@ var app = builder.Build();
 app.UseRouting();
 
 app.UseEndpoints(endpoints => {
-    endpoints.MapGet("name/{name}", async (context) => {
+    endpoints.MapGet("name/{name=Great}", async (context) => {
        string? name = Convert.ToString(context.Request.RouteValues["name"]);
         await context.Response.WriteAsync($"{name} is cool");
+        });
+        endpoints.MapGet("items/{id}", async (context) => {
+       int id = Convert.ToInt32(context.Request.RouteValues["id"]);
+        await context.Response.WriteAsync($"The {id} Item ID");
         });
     endpoints.MapGet("example", async (context) => await context.Response.WriteAsync("Example"));
         endpoints.MapPost("example", async (context) => await context.Response.WriteAsync("Example Post"));
