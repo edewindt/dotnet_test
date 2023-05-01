@@ -11,7 +11,7 @@ app.UseEndpoints(endpoints => {
        string? name = Convert.ToString(context.Request.RouteValues["name"]);
         await context.Response.WriteAsync($"{name} is cool");
         });
-        endpoints.MapGet("items/{id}", async (context) => {
+        endpoints.MapGet("items/{id?}", async (context) => {
        int id = Convert.ToInt32(context.Request.RouteValues["id"]);
         await context.Response.WriteAsync($"The {id} Item ID");
         });
