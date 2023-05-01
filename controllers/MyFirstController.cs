@@ -1,3 +1,4 @@
+using ControllersExample.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ControllersExample.Controllers
@@ -11,9 +12,15 @@ namespace ControllersExample.Controllers
             
         }
         [Route("/anime")]
-        public string Anime()
+        public JsonResult Anime()
         {
-            return "Anime Endpoint";
+            Anime anime = new Anime() {
+                Id = Guid.NewGuid(),
+                Name = "Darwin's Game",
+                Description = "One of The Greatest Anime's Of All Time"
+            };
+
+            return new JsonResult(anime);
         }
         [Route("/test")]
         public string Test()
