@@ -24,3 +24,4 @@ C:\Users\Edewi\Documents\projects\dotnet\dotnet_test\obj\Debug\net7.0\refint\dot
 C:\Users\Edewi\Documents\projects\dotnet\dotnet_test\obj\Debug\net7.0\dotnet_test.pdb
 C:\Users\Edewi\Documents\projects\dotnet\dotnet_test\obj\Debug\net7.0\dotnet_test.genruntimeconfig.cache
 C:\Users\Edewi\Documents\projects\dotnet\dotnet_test\obj\Debug\net7.0\ref\dotnet_test.dll
+C:\Users\Edewi\Documents\projects\dotnet\dotnet_test\bin\Debug\net7.0\dotnet_test.staticwebassets.runtime.json

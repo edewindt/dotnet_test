@@ -4,6 +4,8 @@ var builder = WebApplication.CreateBuilder(args);
 // builder.Services.AddTransient<MyFirstMiddleware>();
 var app = builder.Build();
 
+app.UseStaticFiles();
+
 app.UseRouting();
 
 app.UseEndpoints(endpoints => {
@@ -48,7 +50,7 @@ app.UseEndpoints(endpoints => {
 // app.Run(async context => {
 //     await context.Response.WriteAsync("Hello from regular middleware");
 // });
-// app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () => "Hello World!");
 
 // app.MapGet("/anime", () => "Anime Endpoint");
 

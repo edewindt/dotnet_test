@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\dotnet_test\\wwwroot\\arr.png",
+      "PackagePath": "staticwebassets\\arr.png"
+    },
+    {
+      "Id": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\dotnet_test\\wwwroot\\cahr.png",
+      "PackagePath": "staticwebassets\\cahr.png"
+    },
+    {
+      "Id": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\dotnet_test\\wwwroot\\map.png",
+      "PackagePath": "staticwebassets\\map.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.dotnet_test.props",
+      "PackagePath": "build\\dotnet_test.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.dotnet_test.props",
+      "PackagePath": "buildMultiTargeting\\dotnet_test.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.dotnet_test.props",
+      "PackagePath": "buildTransitive\\dotnet_test.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.dotnet_test.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,11 +1,71 @@
 {
   "Version": 1,
-  "Hash": "TnTgwaaW8csyTHwwH09sDNqblL/J7w/fOa1I0jW7YRM=",
+  "Hash": "p48japYzfJ5CP7ZvQL/Xf7FNNOm1rK5GBJq4jpfRhpk=",
   "Source": "dotnet_test",
   "BasePath": "_content/dotnet_test",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "dotnet_test\\wwwroot",
+      "Source": "dotnet_test",
+      "ContentRoot": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\dotnet_test\\wwwroot\\",
+      "BasePath": "_content/dotnet_test",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\dotnet_test\\wwwroot\\arr.png",
+      "SourceId": "dotnet_test",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\dotnet_test\\wwwroot\\",
+      "BasePath": "_content/dotnet_test",
+      "RelativePath": "arr.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\arr.png"
+    },
+    {
+      "Identity": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\dotnet_test\\wwwroot\\cahr.png",
+      "SourceId": "dotnet_test",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\dotnet_test\\wwwroot\\",
+      "BasePath": "_content/dotnet_test",
+      "RelativePath": "cahr.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\cahr.png"
+    },
+    {
+      "Identity": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\dotnet_test\\wwwroot\\map.png",
+      "SourceId": "dotnet_test",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\dotnet_test\\wwwroot\\",
+      "BasePath": "_content/dotnet_test",
+      "RelativePath": "map.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\map.png"
+    }
+  ]
 }
