@@ -7,7 +7,7 @@ var app = builder.Build();
 app.UseRouting();
 
 app.UseEndpoints(endpoints => {
-    endpoints.MapGet("name/{name=Great}", async (context) => {
+    endpoints.MapGet("name/{name:minlength(2)}", async (context) => {
        string? name = Convert.ToString(context.Request.RouteValues["name"]);
         await context.Response.WriteAsync($"{name} is cool");
         });
