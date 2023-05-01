@@ -28,12 +28,11 @@ namespace ControllersExample.Controllers
             return "Test Endpoint";
         }
         [Route("/docs/{id:int}")]
-        public IActionResult Documents()
+        public IActionResult Documents(int? id)
         {
-            int id = Convert.ToInt32(Request.RouteValues["id"]);
             if (id == 4)
             {
-                return BadRequest();
+                return BadRequest("You gave a ID of 4");
             }
             
             return Content($"Document {id}", "text/plain");
