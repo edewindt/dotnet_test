@@ -6,13 +6,13 @@ namespace ControllersExample.Controllers
    public class MyFirstController : Controller
     {
         [Route("/")]
-        public ContentResult Index()
+        public ContentResult Index(string? value)
         {
-            return Content("<h1>Bruh</h1>","text/html");
+            return Content($"<h1>{value}</h1>","text/html");
             
         }
         [Route("/anime")]
-        public JsonResult Anime()
+        public IActionResult Anime()
         {
             Anime anime = new Anime() {
                 Id = Guid.NewGuid(),
@@ -20,7 +20,7 @@ namespace ControllersExample.Controllers
                 Description = "One of The Greatest Anime's Of All Time"
             };
 
-            return new JsonResult(anime);
+            return Json(anime);
         }
         [Route("/test")]
         public string Test()
@@ -28,10 +28,15 @@ namespace ControllersExample.Controllers
             return "Test Endpoint";
         }
         [Route("/docs/{id:int}")]
-        public string Documents()
+        public IActionResult Documents()
         {
             int id = Convert.ToInt32(Request.RouteValues["id"]);
-            return $"Document {id}";
+            if (id == 4)
+            {
+                return BadRequest();
+            }
+            
+            return Content($"Document {id}", "text/plain");
         }
     }
     
