@@ -5,9 +5,10 @@ namespace ControllersExample.Controllers
    public class MyFirstController : Controller
     {
         [Route("/")]
-        public string Index()
+        public ContentResult Index()
         {
-            return "Hello World!";
+            return Content("Hello Bro!","text/plain");
+            
         }
         [Route("/anime")]
         public string Anime()
