@@ -22,6 +22,10 @@ app.UseEndpoints(endpoints => {
             }
     
         });
+        endpoints.Map("dates/{date:datetime?}", async (context) => {
+            DateTime date = Convert.ToDateTime(context.Request.RouteValues["date"]);
+            await context.Response.WriteAsync($"{date.ToShortDateString()}");
+        });
     endpoints.MapGet("example", async (context) => await context.Response.WriteAsync("Example"));
         endpoints.MapPost("example", async (context) => await context.Response.WriteAsync("Example Post"));
     endpoints.MapGet("example2", async (context) => await context.Response.WriteAsync("Example2"));
