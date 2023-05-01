@@ -29,6 +29,11 @@ app.UseEndpoints(endpoints => {
     endpoints.MapGet("example", async (context) => await context.Response.WriteAsync("Example"));
         endpoints.MapPost("example", async (context) => await context.Response.WriteAsync("Example Post"));
     endpoints.MapGet("example2", async (context) => await context.Response.WriteAsync("Example2"));
+
+    endpoints.Map("docs/{doc:guid}", async (context) => {
+    Guid doc = Guid.Parse(Convert.ToString(context.Request.RouteValues["doc"])!);
+    await context.Response.WriteAsync($"The GUID for the document is {doc}");
+});
 });
 
 // app.UseWhen(
