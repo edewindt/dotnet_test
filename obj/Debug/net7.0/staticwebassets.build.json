@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "p48japYzfJ5CP7ZvQL/Xf7FNNOm1rK5GBJq4jpfRhpk=",
+  "Hash": "Ijs0L0mZTeYRFu/SE2cl647YKgnGxLAYMi9mpiqDdzo=",
   "Source": "dotnet_test",
   "BasePath": "_content/dotnet_test",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\cahr.png"
+    },
+    {
+      "Identity": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\dotnet_test\\wwwroot\\happy.html",
+      "SourceId": "dotnet_test",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\dotnet_test\\wwwroot\\",
+      "BasePath": "_content/dotnet_test",
+      "RelativePath": "happy.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\happy.html"
     },
     {
       "Identity": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\dotnet_test\\wwwroot\\map.png",

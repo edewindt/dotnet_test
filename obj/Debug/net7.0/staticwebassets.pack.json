@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\cahr.png"
     },
     {
+      "Id": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\dotnet_test\\wwwroot\\happy.html",
+      "PackagePath": "staticwebassets\\happy.html"
+    },
+    {
       "Id": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\dotnet_test\\wwwroot\\map.png",
       "PackagePath": "staticwebassets\\map.png"
     },
