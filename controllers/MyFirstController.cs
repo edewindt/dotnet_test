@@ -27,7 +27,7 @@ namespace ControllersExample.Controllers
         {
             return "Test Endpoint";
         }
-        [Route("/docs/{id}")]
+        [Route("/docs/{id:int}")]
         public string Documents()
         {
             int id = Convert.ToInt32(Request.RouteValues["id"]);
