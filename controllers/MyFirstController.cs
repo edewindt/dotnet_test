@@ -7,7 +7,7 @@ namespace ControllersExample.Controllers
         [Route("/")]
         public ContentResult Index()
         {
-            return Content("Hello Bro!","text/plain");
+            return Content("<h1>Bruh</h1>","text/html");
             
         }
         [Route("/anime")]
